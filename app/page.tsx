@@ -49,7 +49,7 @@ export default function Home() {
             effect="fade"
             navigation
             modules={[Autoplay, Pagination, EffectFade]}
-            className="h-screen md:h-[30rem]"
+            className="h-screen"
           >
             {images.map(({ image, text }, i) => (
               <SwiperSlide
