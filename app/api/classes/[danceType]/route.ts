@@ -9,7 +9,7 @@ import {
 } from "@/lib/services";
 import { DanceClass } from "@/models";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../auth/[...nextauth]/route";
+import { authOptions } from "../../auth/[...nextauth]/authOptions";
 
 const saltRounds = 10;
 

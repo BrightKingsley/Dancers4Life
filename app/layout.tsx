@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+// import { Poppins } from "next/font/google";
 import "/public/css/globals.css";
 import {
   AuthContextProvider,
@@ -13,13 +13,13 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: "normal",
-  display: "swap",
-  fallback: ["poppins"],
-  subsets: ["latin-ext", "latin"],
-});
+// const poppins = Poppins({
+//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+//   style: "normal",
+//   display: "swap",
+//   fallback: ["poppins"],
+//   subsets: ["latin-ext", "latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Welcome to Malipoma",
@@ -33,7 +33,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      {/* <body className={poppins.className}> */}
+      <body className="">
         <div id="modal" />
         <div id="notification" />
         <AuthContextProvider>

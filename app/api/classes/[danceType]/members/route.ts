@@ -1,36 +1,37 @@
-// import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/app/api/auth/[...nextauth]/authOptions";
 // import { exitGroup, getMembers } from "@/lib/db";
 // import { stringToObjectId } from "@/lib/utils";
 // import { User, Group } from "@/models";
-// import { getServerSession } from "next-auth";
-// import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { NextRequest, NextResponse } from "next/server";
 
-// type GetProps = {
-//   params: {
-//     groupID: string;
-//   };
-// };
+type GetProps = {
+  params: {
+    groupID: string;
+  };
+};
 
-// export async function GET(
-//   request: NextRequest,
-//   { params: { groupID } }: GetProps
-// ) {
-//   try {
-//     const serverSession = await getServerSession(authOptions);
+export async function GET(
+  request: NextRequest,
+  { params: { groupID } }: GetProps
+) {
+  try {
+    const serverSession = await getServerSession(authOptions);
 
-//     if (!serverSession || !serverSession.user || !serverSession.user.id)
-//       throw new Error("Invalid user");
+    if (!serverSession || !serverSession.user || !serverSession.user.id)
+      throw new Error("Invalid user");
 
-//     const userID = serverSession.user.id;
+    const userID = serverSession.user.id;
 
-//     const groupMembers = await getMembers({ groupID, userID });
+    // const groupMembers = await getMembers({ groupID, userID });
+    const groupMembers = [{}];
 
-//     return NextResponse.json(groupMembers);
-//   } catch (error) {
-//     console.error({ error });
-//     return NextResponse.json(null);
-//   }
-// }
+    return NextResponse.json(groupMembers);
+  } catch (error) {
+    console.error({ error });
+    return NextResponse.json(null);
+  }
+}
 
 // export async function DELETE(request: NextRequest) {
 //   try {
@@ -66,5 +67,3 @@
 //     return NextResponse.json(null);
 //   }
 // }
-
-export const meee = "";

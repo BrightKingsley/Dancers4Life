@@ -7,7 +7,7 @@ import {
   getDanceClasses,
 } from "@/lib/services";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/app/api/auth/[...nextauth]/authOptions";
 import { customErrorResponse } from "@/utils/functions/server/error";
 
 export async function GET() {

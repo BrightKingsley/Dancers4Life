@@ -15,7 +15,7 @@ export default async function EventDetails({
 
     return (
       <div className="w-[95%] mx-auto h-full space-y-5 overflow-auto">
-        <HeadingAction text={event.name} />
+        <HeadingAction type="event" text={event.name} />
         <div className="">
           <span>Duration:</span>
           <span>{event.date.toLocaleDateString()}</span>
