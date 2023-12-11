@@ -100,7 +100,7 @@ export default function ItemCard({
         <div
           onMouseEnter={(e) => !matches.small && handleMouseEnter(e)}
           onMouseLeave={(e) => !matches.small && handleMouseLeave(e)}
-          className="w-full col-span-full h-[20rem] relative overflow-clip bg-white"
+          className="w-full col-span-full h-[30rem] relative overflow-clip bg-white hover:border-brand-orange hover:border-2"
         >
           <div className="absolute z-10 top-8 left-6 flex items-center gap-2">
             {registered && (
